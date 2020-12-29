@@ -1,0 +1,58 @@
+parser: "@typescript-eslint/parser"
+parserOptions:
+  sourceType: module
+  project: './config/tsconfig.json'
+env:
+  es6: true
+plugins:
+  - "@typescript-eslint"
+  - prettier
+  - simple-import-sort
+
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:react/recommended
+  - prettier
+  - prettier/@typescript-eslint
+  - plugin:prettier/recommended
+
+settings:
+  react:
+    createClass: "createReactClass"
+    pragma: "React"
+    version: "detect"
+
+rules:
+  "@typescript-eslint/member-delimiter-style":
+      - error
+      - multiline:
+          delimiter: none
+          requireLast: true
+        singleline:
+          delimiter: semi
+          requireLast: false
+  "@typescript-eslint/explicit-function-return-type": 0
+  "@typescript-eslint/explicit-module-boundary-types": 0
+  comma-dangle:
+    - error
+    - always-multiline
+  explicit-module-boundary-types: 0
+  eqeqeq:
+    - error
+    - always
+    - null: ignore
+  indent: [error, 4]
+  no-console:
+    - warn
+    - allow: ["warn", "error"]
+  react/prop-types: 0
+  semi: [error, never]
+  simple-import-sort/imports: error
+  simple-import-sort/exports: error
+  sort-keys:
+    - error
+    - asc
+    - natural: true
+      minKeys: 5

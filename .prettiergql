@@ -1,0 +1,8 @@
+{
+    "parser": "graphql",
+    "tabWidth": 4,
+    "useTabs": false,
+    "trailingComma": "none",
+    "semi": false,
+    "printWidth": 88
+}
